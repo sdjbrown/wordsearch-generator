@@ -192,13 +192,19 @@ $(document).ready(function() {
 				tex += row.join(' & ')+' \\\\ \n';
 				html += '</tr>\n';
 			})
-
-
+			
 			tex += '\
 \\end{TAB}\n\n\
+Kitea ngā kupu:\n';
+			
+			tex += $('#words').val().toUpperCase()+'\n\n';
+			
+			tex += '\
 \\end{document}';
 
-			html += '</table>';
+			html += '</table>\n\n <h2>Kitea ngā kupu:</h2>\n';
+			html += $('#words').val().toUpperCase();
+			
 			$('#tex').text(tex);
 			$('#html').text(html);
 		};
